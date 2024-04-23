@@ -1,0 +1,57 @@
+body {
+    background-image: url('https://mona.solutions/template/images/galweb-banner.jpg');
+}
+.container {
+    background-color: rgb(234, 234, 234);
+    max-width: 350px;
+    margin: 250px 250px;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.app-option {
+    display: inline-block;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+
+.app-option.selected {
+    transform: scale(1.2); 
+}
+
+.app-option:hover {
+    transform: scale(1.2); 
+}
+
+.app-option img {
+    width: 48px;
+    height: 48px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.app-name {
+    display: block;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
