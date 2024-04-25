@@ -63,3 +63,18 @@ button {
 button:hover {
     background-color: #0056b3;
 }
+
+.feedback {
+    position: fixed;
+    left: 29%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: bottom 1s ease
+}
+
+.feedback.hidden {
+    transform: translateY(-100px); 
+}
