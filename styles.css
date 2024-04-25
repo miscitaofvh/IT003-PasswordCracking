@@ -3,7 +3,7 @@ body {
 }
 .container {
     background-color: rgb(234, 234, 234);
-    max-width: 350px;
+    width: 350px;
     margin: 250px 250px;
     padding: 20px;
     border: 2px solid #ccc;
@@ -12,16 +12,21 @@ body {
 }
 
 h2 {
+    flex: 0;
     margin-bottom: 20px;
+}
+
+.item {
+    display: inline-block;
+    margin-right: 20px;
 }
 
 .app-option {
     display: inline-block;
-    margin-right: 20px;
+    margin-right: 0px;
     cursor: pointer;
     transition: transform 0.3s;
 }
-
 
 .app-option.selected {
     transform: scale(1.2); 
@@ -36,10 +41,12 @@ h2 {
     height: 48px;
     display: block;
     margin-bottom: 5px;
+    text-align: center; 
 }
 
 .app-name {
     display: block;
+    text-align: center;
 }
 
 button {

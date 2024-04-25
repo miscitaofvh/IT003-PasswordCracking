@@ -1,29 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Password Cracking</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="container">
-        <h2>Chọn ứng dụng:</h2>
-        <div class="app-list">
-            <label class="app-option" for="facebook">
-                <img width="48" height="48" src="https://img.icons8.com/fluency/48/facebook.png" alt="facebook"/>
+    <head>
+        <meta charset="UTF-8">
+        <title>Password Cracking</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="container">
+            <h2>Which is applicantion do you want to choose?</h2>
+            <div class="app-list">
+                <div class="item">
+                    <label class="app-option" app-name="facebook">
+                    <img width="48" height="48" src="https://img.icons8.com/fluency/48/facebook.png" alt="facebook"/>
+                </label>
                 <span class="app-name">Facebook</span>
-            </label>
-            <label class="app-option" for="instagram">
-                <img width="48" height="48" src="https://img.icons8.com/fluency/48/instagram-new.png" alt="instagram-new"/>
-                <span class="app-name">Instagram</span>
-            </label>
-            <label class="app-option" for="gmail">
-                <img width="48" height="48" src="https://img.icons8.com/color/48/gmail-new.png" alt="gmail-new"/>
-                <span class="app-name">Gmail</span>
-            </label>
+                </div>
+                <div class="item">
+                <label class="app-option" app-name="instagram">
+                    <img width="48" height="48" src="https://img.icons8.com/fluency/48/instagram-new.png" alt="instagram-new"/>
+                </label>
+                    <span class="app-name">Instagram</span>
+                </div>
+                <div class="item">
+                    <label class="app-option" app-name="gmail">
+                        <img width="48" height="48" src="https://img.icons8.com/color/48/gmail-new.png" alt="gmail-new"/>
+                    </label>
+                    <span class="app-name">Gmail</span>
+                </div>
+            </div>
+                <button class="submit-button" type="button">Submit</button>
         </div>
-        <button type="button">Xác nhận</button>
-    </div>
-    <script src="script.js"></script>
-</body>
+        <script src="script.js"></script>
+    </body>
 </html>
