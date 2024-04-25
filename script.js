@@ -25,6 +25,13 @@ confirmButton.addEventListener('click', () => {
                 break;
         }
     } else {
-        console.log('Please choose an application');
-    }
+        var feedback_text = "Please chooose an application";
+        var feedback = document.getElementById("feedback");
+        feedback.textContent = feedback_text;
+        feedback.style.display = "block";
+
+        setTimeout(function() {
+        feedback.style.display = "none";
+        }, 1000); 
+}
 });
