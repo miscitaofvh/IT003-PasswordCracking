@@ -4,27 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Form</title>
+    <title>Facebook:PasswordCracking</title>
     <link rel="stylesheet" href="_styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 </head>
 
 <body>
     <div class="wrapper">
-        <header>Infomation</header>
+        <h2>Information</h2>
         <form action="#">
             <div class="field password">
                 <div class="input-area">
-                    <input type="password" placeholder="Facebook URL">
+                    <input type="text" id="input" placeholder="Facebook URL">
                     <i class="icon fas fa-lock"></i>
-                    <i class="error error-icon fas fa-exclamation-circle"></i>
                 </div>
             </div>
-            <input type="submit" value="Submit">
+            <input type="submit" value="Submit" onclick="solve()">
         </form>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script_fb.js"></script>
 
 </body>
 
