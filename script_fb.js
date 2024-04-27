@@ -1,20 +1,25 @@
-var prefix = "https://www.facebook.com/"
-
+var prefix = "https://www.facebook.com/";
 
 function checkURL(url) {
     var xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState === 4) {
-            if (xhr.status === 200) {
-                alert(xhr.status);
-            } else {
-                alert(xhr.status);
-            }
+    var method = "GET";
+    var phpurl = "checkurl.php?url=" + encodeURIComponent(url);
+
+    xhr.open(method, phpurl);
+
+    xhr.onload = function () {
+        if (xhr.status === 200) {
+            console.log(xhr.responseText);
+        } else {
+            console.error('Request failed. Status:', xhr.status);
         }
     };
-    alert(xhr.status);
-    xhr.open("HEAD", url, true);
-    xhr.send();
+
+    xhr.onerror = function () {
+    console.error('Request failed. Network error.');
+    };
+    
+    xhr.send();    
 }
 
 function solve() {
@@ -30,20 +35,5 @@ function solve() {
         return;
     }
     
-    if (checkURL(inputValue)) {
-        
-        return;
-    }
-   
-    return;
-
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", "process_input.py", true);
-    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-            document.getElementById("output").innerHTML = xhr.responseText;
-        }
-    };
-    xhr.send("inputValue=" + inputValue);
+    checkURL(inputValue);
 }
