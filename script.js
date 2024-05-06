@@ -1,30 +1,18 @@
-document.querySelectorAll('.app-option').forEach(option => {
-    option.addEventListener('click', () => {
-        document.querySelectorAll('.app-option').forEach(item => {
-            item.classList.remove('selected');
-        });
-        option.classList.add('selected');
-    });
-});
+document.querySelector("html").classList.add('js');
 
-const confirmButton = document.querySelector('.submit-button');
-
-confirmButton.addEventListener('click', () => {
-    const selectedApp = document.querySelector('.app-option.selected');
-    if (selectedApp) {
-        const appName = selectedApp.getAttribute('app-name');
-        switch (appName) {
-            case 'facebook':
-                window.location.href = 'facebook.html';
-                break;
-            case 'instagram':
-                window.location.href = 'instagram.html';
-                break;
-            case 'gmail':
-                window.location.href = 'gmail.html';
-                break;
-        }
-    } else {
-        alert("Please chooose an application");
-}
+var fileInput  = document.querySelector( ".input-file" ),  
+    button     = document.querySelector( ".input-file-trigger" ),
+    the_return = document.querySelector(".file-return");
+      
+button.addEventListener( "keydown", function( event ) {  
+    if ( event.keyCode == 13 || event.keyCode == 32 ) {  
+        fileInput.focus();  
+    }  
 });
+button.addEventListener( "click", function( event ) {
+   fileInput.focus();
+   return false;
+});  
+fileInput.addEventListener( "change", function( event ) {  
+    the_return.innerHTML = this.value;  
+});  
