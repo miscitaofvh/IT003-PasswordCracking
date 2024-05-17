@@ -29,8 +29,26 @@ crackButton.addEventListener("click", function(event) {
     xhr.open("POST", 'http://127.0.0.1:5000/crack', true);
     xhr.onload = function () {
         var response = JSON.parse(xhr.responseText);
-        alert(response.message)
-        //document.getElementById("output").innerHTML = response.message;
+        if (response.hasOwnProperty('message'))
+        {
+            alert(response.message);
+        }
+        if (response.hasOwnProperty('password'))
+        {
+            const data = {"password":response.password};
+            sessionStorage.setItem('data', JSON.stringify(data));
+
+            formData.append("password", response.password);
+            var _xhr = new XMLHttpRequest();
+
+            _xhr.open("POST", 'http://127.0.0.1:5000/removePassword');
+            _xhr.onload = function () {
+                window.location.href = "download.html";
+            }
+
+            _xhr.send(formData);
+            window.location.href = "download.html";
+        }
     };
     
     xhr.send(formData);
