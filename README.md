@@ -10,7 +10,7 @@ pip install -r requirement.txt
 
 - Continue typing this command to start the server.
 ```
-python3 server.py
+python server.py
 ```
 
 - After that, you can launch the web by right-clicking on **index.html** and choose **Open with Live Server**.
