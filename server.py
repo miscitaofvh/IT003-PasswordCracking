@@ -6,16 +6,23 @@ import zlib
 import requests
 import os
 
-# Define the character set and the limit for password length
+"""Define the character set and the limit for password length"""
 listChar = ".QWERTYUIOPASDFGHJKLZXCVBNM1234567890qwertyuiopasdfghjklzxcvbnm"
 limitLength = 1
 
-# Initialize Flask app and enable CORS
+"""Initialize Flask app and enable CORS"""
 app = Flask(__name__)
 CORS(app)
 
 @app.route('/crack', methods=["POST"])
 def crack():
+    """
+    Handle the '/crack' route to attempt to crack the password of a given zip file.
+    
+    Returns:
+        JSON response containing either the cracked password or a failure message.
+    """
+
     zipFile = request.files.get('file')
     if not zipFile:
         return jsonify({"message":"Please select a file"})
@@ -48,9 +55,17 @@ def crack():
 
 @app.route('/removePassword', methods=["POST"])
 def removePassword():
+    """
+    Handle the '/removePassword' route to remove the password from a given zip file.
+    
+    This route takes a zip file and its password, then creates a new zip file without
+    a password and saves it as 'output.zip'.
+   
+    Returns:
+        JSON response indicating success or failure.
+    """
     zipFile = request.files.get('file')
     pwd = request.form["password"]
-    path = "./" + zipFile.filename[:-4]
     if os.path.exists("output.zip"):
         os.remove("output.zip")
         

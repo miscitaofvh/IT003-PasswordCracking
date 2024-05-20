@@ -1,8 +1,10 @@
+/* Body styling */
 body {
     background-image: url('https://mona.solutions/template/images/galweb-banner.jpg');
     color: #7F8C9A;
 }
 
+/* Main container styling */
 .container {
     background-color: rgb(234, 234, 234);
     width: 350px;
@@ -13,20 +15,21 @@ body {
     text-align: center;
 }
 
-h2 {
-    flex: 0;
-    margin-bottom: 20px;
-}
+/* Input file container styling */
 .input-file-container {
     display: flex;
     justify-content: space-between; 
     align-items: center; 
 }
+
+/* Output file container styling */
 .output-file-container {
     display: flex;
     justify-content: space-between; 
     align-items: center; 
 }
+
+/* Styling for file input trigger button when JavaScript is enabled */
 .js .input-file-trigger {
     flex-grow: 1;
     display: block;
@@ -38,56 +41,78 @@ h2 {
     cursor: pointer;
     border-radius: 4px;
 }
+
+/* Styling for file input element when JavaScript is enabled */
 .js .input-file {
     position: absolute;
-    top: 0; left: 0;
+    top: 0;
+    left: 0;
     width: 200px;
     opacity: 0;
     padding: 8px 0;
     cursor: pointer;
 }
+
+/* Styling for file input trigger button on hover and focus when JavaScript is enabled */
 .js .input-file-trigger:hover,
 .js .input-file-trigger:focus {
     background: #34495E;
     color: #39D2B4;
 }
-  
+
+/* Styling for file return paragraph */
 .file-return {
     margin: 0;
 }
+
+/* Styling for file return paragraph when not empty */
 .file-return:not(:empty) {
     margin: 1em 0;
 }
+
+/* Styling for file return paragraph when JavaScript is enabled */
 .js .file-return {
     font-style: italic;
     font-size: .9em;
     font-weight: bold;
 }
+
+/* Prefix content for file return paragraph when not empty and JavaScript is enabled */
 .js .file-return:not(:empty):before {
     content: "Selected file: ";
     font-style: normal;
     font-weight: normal;
 }
 
+/* Styling for headings (h1, h2) */
 h1, h2 {
     margin-bottom: 5px;
     font-weight: normal;
     text-align: center;
-    color:#aaa;
-  }
+    color: #aaa;
+}
+
+/* Additional styling for heading (h2) */
 h2 {
+    flex: 0;
+    margin-bottom: 20px;
     margin: 5px 0 2em;
     color: #1ABC9C;
 }
+
+/* Form styling */
 form {
     width: 225px;
     margin: 0 auto;
-    text-align:center;
-}
-  h2 + P {
     text-align: center;
 }
 
+/* Styling for paragraph following h2 */
+h2 + P {
+    text-align: center;
+}
+
+/* Styling for the crack button */
 .crack-button {
     display: block;
     padding: 15px 20px;
@@ -98,10 +123,14 @@ form {
     margin-left: 20px; 
     background: #39D2B4;
 }
+
+/* Styling for the crack button on hover */
 .crack-button:hover {
     background: #34495E;
     color: #39D2B4;
 }
+
+/* Styling for the download button */
 .download-button {
     display: block;
     padding: 15px 20px;
@@ -112,6 +141,8 @@ form {
     margin-inline: 70px; 
     background: #39D2B4;
 }
+
+/* Styling for the download button on hover */
 .download-button:hover {
     background: #34495E;
     color: #39D2B4;

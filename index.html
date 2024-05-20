@@ -3,20 +3,28 @@
     <head>
         <meta charset="UTF-8">
         <title>Password Cracking</title>
+        <!-- Link to the main stylesheet -->
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
+        <!-- Main container for the cracking tool -->
         <div class="container">
             <h2>Cracking Tool</h2>
+            <!-- Form for uploading the zip file and triggering the password crack -->
             <form action="#" method="post" enctype="multipart/form-data">
                 <div class="input-file-container">  
-                  <input class="input-file" id="my-file" type="file">
-                  <label tabindex="0" for="my-file" class="input-file-trigger">Select a file</label>
-                  <button class="crack-button" type="button">Crack</button>
+                    <!-- Input field for selecting the file -->
+                    <input class="input-file" id="my-file" type="file">
+                    <!-- Label for the file input, styled as a button -->
+                    <label tabindex="0" for="my-file" class="input-file-trigger">Select a file</label>
+                    <!-- Button to initiate the cracking process -->
+                    <button class="crack-button" type="button">Crack</button>
                 </div>
+                <!-- Paragraph to display the selected file name or messages -->
                 <p class="file-return"></p>
-              </form>
+            </form>
         </div>
+        <!-- Link to the main JavaScript file -->
         <script src="script.js"></script>
     </body>
 </html>
