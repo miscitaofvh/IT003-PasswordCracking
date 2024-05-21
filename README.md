@@ -13,6 +13,11 @@ pip install -r requirement.txt
 python server.py
 ```
 
+- if your compiler get error, you can try:
+```
+python3 server.py
+``` 
+
 - After that, you can launch the web by right-clicking on **index.html** and choose **Open with Live Server**.
 - You can use the files 23520569.zip or UIT.zip for cracking.
 

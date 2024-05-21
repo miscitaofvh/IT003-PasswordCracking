@@ -39,7 +39,7 @@ def crack():
         passwords = response.text.splitlines()
         for pwd in passwords:
             try:
-                zip_ref.extractall(pwd=bytes(pwd, 'utf-8'))
+                zip_ref.extractall(pwd = pwd.encode())
                 return jsonify({"password":pwd})
             except (RuntimeError, BadZipFile, zlib.error):
                 continue
@@ -47,7 +47,7 @@ def crack():
             for pwd_tuple in itertools.product(listChar, repeat=length):
                 pwd = ''.join(pwd_tuple)
                 try:
-                    zip_ref.extractall(pwd=bytes(pwd, 'utf-8'))
+                    zip_ref.extractall(pwd=pwd.encode())
                     return jsonify({"password":pwd})
                 except (RuntimeError, BadZipFile, zlib.error):
                     continue
